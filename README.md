@@ -121,6 +121,20 @@ QUEUE_STRESS_ITEMS=1000 python -m pytest -q -m stress
 
 ## 性能测量
 
+完整评估见 **[并发性能报告](docs/performance.md)**，涵盖 1–32 个线程的扩展性、
+吞吐与延迟、CPU、CAS 竞争、空轮询退避、内存回收和优化优先级。
+报告附带原始 JSON、CSV 和图表，使用独立进程、预热与多轮测量。
+
+复现完整评估（需要几分钟）：
+
+```powershell
+python -m pip install -e ".[test,benchmark]"
+python -m benchmarks.evaluate --output docs/performance/raw.json
+python -m benchmarks.report --input docs/performance/raw.json
+```
+
+下面的轻量脚本用于快速检查，历史短负载结果不能代替完整报告：
+
 ```powershell
 python benchmarks/throughput.py --producers 4 --consumers 4 --items 1000 --rounds 3
 ```

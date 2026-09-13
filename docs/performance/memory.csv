@@ -1,0 +1,13 @@
+queue,depth,measurement,filled_minus_empty_bytes,drained_minus_empty_bytes,destroyed_minus_before_bytes,registry_bytes_after_drain
+LockFreeQueue,1000,rss,11100160,7249920,6959104,36952
+LockFreeQueue,1000,tracemalloc,10802205,60532,25525,36952
+LockFreeQueue,10000,rss,114167808,35385344,34775040,294992
+LockFreeQueue,10000,tracemalloc,107802729,320056,27009,294992
+Queue,1000,rss,0,0,4096,
+Queue,1000,tracemalloc,8724,8936,852,
+Queue,10000,rss,12288,12288,16384,
+Queue,10000,tracemalloc,82644,8936,852,
+SimpleQueue,1000,rss,4096,4096,8192,
+SimpleQueue,1000,tracemalloc,9044,456,852,
+SimpleQueue,10000,rss,90112,90112,94208,
+SimpleQueue,10000,tracemalloc,85364,456,852,

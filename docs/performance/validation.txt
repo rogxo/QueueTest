@@ -1,0 +1,19 @@
+Validation recorded on 2026-09-13 for this performance report.
+
+Command: python -m pytest -q
+Result: 84 passed in 29.81s
+
+Command: python -m ruff check src tests benchmarks examples
+Result: All checks passed!
+
+Command: python -m ruff format --check src tests benchmarks examples
+Result: 14 files already formatted
+
+Data audit:
+- All recorded source SHA-256 hashes match the measured working-tree files.
+- All required trial groups are complete, with no missing/duplicate rounds.
+- Regenerated summary matches docs/performance/summary.json.
+- Local README/report links resolve to existing files.
+- 205 formal measurements completed; 201 transfer/contention/memory runs passed delivery checks.
+- Uninstrumented transfer runs verified 35,481,156 messages.
+- Queue implementation is unchanged from da3534f5efa7b005c127ffb73aa849bde110fbc1.
